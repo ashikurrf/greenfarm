@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./scss/admin.css">
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <img src="https://img.icons8.com/material-outlined/32/333333/menu--v1.png" id="menuBtn"/>
+          <img src="../img/icon/logo.svg" height="64" class="pl-2"/>
+        </div>
+        <div class="col-sm-4 offset-sm-4 d-flex justify-content-around align-items-center">
+          <div class="user-name">Hello, <span id="admin-name">Admin</span></div>
+          <div class="logout">Logout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="root-wrapper">
+    <div id="sidebar"class="dropdown">
+      <a class="dashbord" href="./dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+      <a class="Product" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD Products <i class="fa fa-chevron-down" aria-hidden="true" style="float: right;"></i></a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li>
+            <a href="./addproduct.html">Add Product</a>
+        </li>
+        <li>
+            <a href="./ptable.html">Product Table</a>
+        </li>
+      </ul><a class="category " href="./category.html"><i class="fa fa-address-book"></i>ADD Category</a>
+      <a class="order" href="./order.html"><i class="fa fa-book" aria-hidden="true"></i>Order</a>
+      <a class="category" href="./image.html"><i class="fa fa-picture-o" aria-hidden="true"></i>Image</a>
+      <a class="category" href="./customer.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Customer</a>
+      <a class="category" href="./massage.html"><i class="fa fa-commenting" aria-hidden="true"></i>Massage</a> 
+    </div>
+    <div id="main">
+      <div class="container-fluid">
+        <!-- new  chart-->
+        <div id="wrapper">
+          <div class="content-area">
+            <div class="container-fluid">
+              <div class="text-right mb-3 d-fixed">
+                <!-- <div class="dropdown">
+                  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ALL
+                  </button>
+                  <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item " href="#">ALL</a>
+                    <a class="dropdown-item " href="#">Today</a>
+                  </div>
+                </div> -->
+                <div class="form-group row">
+                  <label for="inputnumber" class="col-sm-10 col-form-label"></label>
+                  <div class="col-sm-1 offset-sm-1">
+                      <div class="form-group">
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>All</option>
+                            <option>Today</option>
+                
+                          </select>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main">
+                <div class="row sparkboxes mt-4 mb-4 " >
+                  <div class="col-md-4 sales">
+                    <div class="box box1">
+                      <div id="spark1"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 pending">
+                    <div class="box box2">
+                      <div id="spark2"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 cancel">
+                    <div class="box box3">
+                      <div id="spark3"></div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="row mt-5 mb-4">
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div id="bar"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div id="donut"></div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="row mt-4 mb-4">
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div id="area"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div id="line"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul>
+        <li>© goodsandgadgets 2021 All rights reserved.</li>  
+        <li class="link">Made with in<a href=""> GoodsandGadgets</a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <!--Script-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/admin/js/scripts.js"></script>
+</body>
+
+</html>

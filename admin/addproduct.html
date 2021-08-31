@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./scss/admin.css">
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <img src="https://img.icons8.com/material-outlined/32/333333/menu--v1.png" id="menuBtn"/>
+          <img src="../img/icon/logo.svg" height="64" class="pl-2"/>
+        </div>
+        <div class="col-sm-4 offset-sm-4 d-flex justify-content-around align-items-center">
+          <div class="user-name">Hello, <span id="admin-name">Admin</span></div>
+          <div class="logout">Logout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="root-wrapper">
+    <div id="sidebar"class="dropdown">
+      <a class="dashbord" href="./dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+      <a class="Product" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD Products <i class="fa fa-chevron-down" aria-hidden="true" style="float: right;"></i></a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li>
+            <a href="./addproduct.html">Add Product</a>
+        </li>
+        <li>
+            <a href="./ptable.html">Product Table</a>
+        </li>
+      </ul>
+      <a class="category " href="./category.html" ><i class="fa fa-address-book"></i>ADD Category</a>
+      <a class="order" href="./order.html"><i class="fa fa-book" aria-hidden="true"></i>Order</a>
+      <a class="category" href="./image.html"><i class="fa fa-picture-o" aria-hidden="true"></i>Image</a>
+      <a class="category" href="./customer.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Customer</a>
+      <a class="category" href="./massage.html"><i class="fa fa-commenting" aria-hidden="true"></i>Massage</a> 
+    </div>
+    <div id="main">
+      <div class="container-fluid">
+          <div class="product">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 addproduct">
+                <h2>ADD Product</h2>
+                <form class="container">
+                    <div class="form-group row">
+                        <label for="inputtext" class="col-sm-2 col-form-label">Title</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputtext" placeholder="Enter Product name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Buy Price</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="inputnumber" placeholder="Enter buy price">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Sell Price</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="inputnumber" placeholder="Enter Sell price">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Discount %</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="inputnumber" placeholder="Enter discount %">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Image 1</label>
+                        <div class="col-sm-10">
+                          <input  type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Image 2</label>
+                        <div class="col-sm-10">
+                          <input  type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Image 3</label>
+                        <div class="col-sm-10">
+                          <input  type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Color</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Red</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">White</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Green</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                <label class="form-check-label" for="inlineCheckbox4">Blue</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                                <label class="form-check-label" for="inlineCheckbox5">Golden</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                                <label class="form-check-label" for="inlineCheckbox6">Black</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                                <label class="form-check-label" for="inlineCheckbox7">Silver</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                                <label class="form-check-label" for="inlineCheckbox8">Purple</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+                                <label class="form-check-label" for="inlineCheckbox9">Yellow</label>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Category</label>
+                        <div class="col-sm-10">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>    
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Sub Category</label>
+                        <div class="col-sm-10">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Quantity</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="inputnumber" placeholder="Enter product Quantity">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Overview</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Discription</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputtext" class="col-sm-2 col-form-label">YouTube Url</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputtext" placeholder="Enter Product url">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputtext" class="col-sm-2 col-form-label">Keyword</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputtext" placeholder="Enter Product name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputnumber" class="col-sm-2 col-form-label">Offer Category</label>
+                        <div class="col-sm-10">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>none</option>
+                                  <option>New Product</option>
+                                  <option>Hot Deal</option>
+                                </select>
+                        </div>
+                      </div>
+                  </form>
+                  <div class="add-btn">
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                    <button type="submit" class="btn btn-success">Update</button>
+                  </div>
+              </div>
+          </div> 
+          </div>      
+      </div>
+      <footer>
+        <ul>
+        <li>© goodsandgadgets 2021 All rights reserved.</li>  
+        <li class="link">Made with in<a href=""> GoodsandGadgets</a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <!--Script-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/admin/js/scripts.js"></script>
+</body>
+
+</html>

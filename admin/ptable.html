@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./scss/admin.css">
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <img src="https://img.icons8.com/material-outlined/32/333333/menu--v1.png" id="menuBtn"/>
+          <img src="../img/icon/logo.svg" height="64" class="pl-2"/>
+        </div>
+        <div class="col-sm-4 offset-sm-4 d-flex justify-content-around align-items-center">
+          <div class="user-name">Hello, <span id="admin-name">Admin</span></div>
+          <div class="logout">Logout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="root-wrapper">
+    <div id="sidebar"class="dropdown">
+      <a class="dashbord" href="./dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+      <a class="Product" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD Products <i class="fa fa-chevron-down" aria-hidden="true" style="float: right;"></i></a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li>
+            <a href="./addproduct.html">Add Product</a>
+        </li>
+        <li>
+            <a href="./ptable.html">Product Table</a>
+        </li>
+      </ul>
+      <a class="category " href="./category.html" ><i class="fa fa-address-book"></i>ADD Category</a>
+      <a class="order" href="./order.html"><i class="fa fa-book" aria-hidden="true"></i>Order</a>
+      <a class="category" href="./image.html"><i class="fa fa-picture-o" aria-hidden="true"></i>Image</a>
+      <a class="category" href="./customer.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Customer</a>
+      <a class="category" href="./massage.html"><i class="fa fa-commenting" aria-hidden="true"></i>Massage</a> 
+    </div>
+    <div id="main">
+      <div class="container-fluid">
+          <div class="product">
+          <div class="row">
+              
+              <!--Product Table start-->
+              <div class="col-lg-12 col-md-12 col-sm-12 product-table">
+                <h2>Product Table</h2>
+                <div class="product-list">
+                  <ul>
+                    <li>Show</li>
+                    <li><input type="number" class="form-control" placeholder="10"></li>
+                    <li>enties</li>
+                    <li class="search"><input type="search" class="form-control" placeholder="Serach product"></li>
+                  </ul>
+                  <div class="table-list">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Buy price</th>
+                        <th scope="col">Sell Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       
+                        <td>Apple Watch Series 6 Sport Band </td>
+                        <td>2000</td>
+                        <td>2500</td>
+                        <td>212</td>
+                        <td>smart watch</td>
+                        <td class="dropdown dropleft action">
+                          <a href="" class="btn btn-info dropdown-toggle" data-toggle="dropdown">info</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item update" href="#">Update</a>
+                            <a class="dropdown-item view" href="#" data-toggle="modal" data-target="#view">View</a>
+                            <a class="dropdown-item  delete" href="#"data-toggle="modal" data-target="#delete">Delete</a>
+                          </div>
+                        </td>
+                      </tr>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="view">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">   
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">Product Details</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            <img src="../img/category/smer watch.png" alt="">
+                           <h5><strong>Name:</strong>  Apple  watch 3.0 </h5>
+                           <h5><strong>category:</strong> accessories,apple,watch</h5>
+                           <h5><strong>Buy price:</strong> TK  24500</h5>
+                           <h5><strong>Sell Price:</strong> TK 32500</h5>
+                           <h5><strong>Discount%:</strong>  10%</h5>
+                           <h5><strong>Color:</strong> red,black,green</h5>
+                           <h5><strong>Quantity:</strong> 200</h5>
+                           <h5><strong>Overview:</strong>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam placeat ad modi, </h5>
+                           <h5><strong>Discription:</strong>  necessitatibus reprehenderit quasi porro natus facere iste dolorum! Repudiandae rem dolorem fugit ducimus animi excepturi impedit molestias.</h5>
+                          </div>
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                     <!-- The Modal END -->
+                         <!-- The Modal -->
+                    <div class="modal fade" id="delete">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">   
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">Product Delete</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                          <h2>Want to delete the product?</h2>
+                          </div>
+                          <!-- Modal footer -->
+                          <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                     <!-- The Modal END -->
+            
+                    </tbody>
+                  </table>
+                  </div>
+                 <div class="next-page">
+                  <ul class="pager">
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                  </ul>
+                 </div>
+                </div>
+            </div>
+          </div> 
+          </div>      
+      </div>
+      <footer class="fixed-bottom">
+        <ul>
+        <li>© goodsandgadgets 2021 All rights reserved.</li>  
+        <li class="link">Made with in<a href=""> GoodsandGadgets</a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+  <!--Script-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/admin/js/scripts.js"></script>
+</body>
+
+</html>
