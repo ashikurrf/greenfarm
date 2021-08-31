@@ -1498,12 +1498,12 @@ body .wrapper header .header-bottom .navbar .collapse .navbar-nav .nav-item .nav
   }
   .user_profile .update-form form .input-group-addon {
     position: absolute;
-    top: 80%;
+    top: 78%;
     right: 6%;
   }
   .user_profile .update-form form .input-group-addon2 {
     position: absolute;
-    top: 89.5%;
+    top: 88.5%;
     right: 6%;
   }
 }
@@ -1514,12 +1514,12 @@ body .wrapper header .header-bottom .navbar .collapse .navbar-nav .nav-item .nav
   }
   .user_profile .update-form form .input-group-addon {
     position: absolute;
-    top: 81%;
+    top: 79%;
     right: 6%;
   }
   .user_profile .update-form form .input-group-addon2 {
     position: absolute;
-    top: 90%;
+    top: 88.5%;
     right: 6%;
   }
 }
