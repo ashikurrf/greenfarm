@@ -358,10 +358,10 @@ body .wrapper header .header-bottom .navbar .btn-group .dropdown-menu .dropdown:
     font-size: 10px;
   }
   body .wrapper header .header-bottom .navbar .btn-group .dropdown-menu .dropdown .dropdown-content {
-    width: 200px;
+    width: 150px;
   }
   body .wrapper header .header-bottom .navbar .btn-group .dropdown-menu .dropdown-content {
-    width: 200px;
+    width: 180px;
   }
 }
 
